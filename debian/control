@@ -6,6 +6,8 @@ Maintainer: Ryan Niebur <ryanryan52@gmail.com>
 DM-Upload-Allowed: yes
 Standards-Version: 3.8.2
 Homepage: http://ispras.linux-foundation.org/index.php/ABI_compliance_checker
+Vcs-Git: git://git.ryan52.info/git/abi-compliance-checker
+Vcs-Browser: http://git.ryan52.info/?p=abi-compliance-checker;a=summary
 
 Package: abi-compliance-checker
 Architecture: all
