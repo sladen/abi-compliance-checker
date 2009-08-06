@@ -1,5 +1,5 @@
-abi-compliance-checker (1.1-1) UNRELEASED; urgency=low
+abi-compliance-checker (1.1-1) unstable; urgency=low
 
   * Initial release (Closes: #540247)
 
- -- Ryan Niebur <ryanryan52@gmail.com>  Thu, 06 Aug 2009 12:28:53 -0700
+ -- Ryan Niebur <ryanryan52@gmail.com>  Thu, 06 Aug 2009 14:43:30 -0700
