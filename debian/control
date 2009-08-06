@@ -11,7 +11,7 @@ Vcs-Browser: http://git.ryan52.info/?p=abi-compliance-checker;a=summary
 
 Package: abi-compliance-checker
 Architecture: all
-Depends: ${perl:Depends}, ${misc:Depends}
+Depends: ${perl:Depends}, ${misc:Depends}, gcc, binutils
 Description: tool for checking binary compatibility of shared libraries
  ABI-compliance-checker is a lightweight tool for checking backward
  binary compatibility of shared C/C++ libraries in OS Linux. It checks
