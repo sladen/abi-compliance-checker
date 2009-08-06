@@ -1,0 +1,28 @@
+Format-Specification:
+    http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=196
+Upstream-Maintainer: Andrey Ponomarenko
+Upstream-Source: http://ispras.linux-foundation.org/index.php/ABI_compliance_checker_Downloads
+Upstream-Name: ABI compliance checker
+
+Files: *
+Copyright: Copyright (C) The Linux Foundation
+ Copyright (C) Institute for System Programming, RAS
+License: GPL-3+
+
+Files: debian/*
+Copyright: 2009, Ryan Niebur <ryanryan52@gmail.com>
+License: GPL-3+
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ The complete text of the GPL version 3 can be found in
+ '/usr/share/common-licenses/GPL-3' on Debian systems.

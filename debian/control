@@ -1,0 +1,25 @@
+Source: abi-compliance-checker
+Section: devel
+Priority: optional
+Build-Depends: debhelper (>= 7)
+Maintainer: Ryan Niebur <ryanryan52@gmail.com>
+DM-Upload-Allowed: yes
+Standards-Version: 3.8.2
+Homepage: http://ispras.linux-foundation.org/index.php/ABI_compliance_checker
+
+Package: abi-compliance-checker
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}
+Description: tool for checking binary compatibility of shared libraries
+ ABI-compliance-checker is a lightweight tool for checking backward
+ binary compatibility of shared C/C++ libraries in OS Linux. It checks
+ interface signatures and data type definitions in two library
+ versions (headers and shared objects) and searches ABI changes that
+ may lead to incompatibility. Breakage of the compatibility may result
+ in crashing or incorrect behavior of applications built with an old
+ version of a library when it is running with a new
+ one. ABI-compliance-checker was intended for library developers that
+ are interested in ensuring backward binary compatibility. Also
+ ABI-compliance-checker may be used for checking forward binary
+ compatibility and compliance checking of the same library versions on
+ different Linux distributions.

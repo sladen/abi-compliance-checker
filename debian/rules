@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	mkdir -p debian/$(shell dh_listpackages)/usr/bin/
+	cp abi-compliance-checker.pl debian/$(shell dh_listpackages)/usr/bin/abi-compliance-checker
+
+CMD=$(subst override_,,$@)
+
+debian/abi-compliance-checker.1:
+	sh ./debian/man/abi-compliance-checker --help2man > $@
+
+override_dh_installman: debian/abi-compliance-checker.1
+	$(CMD)
