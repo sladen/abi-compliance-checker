@@ -9,7 +9,7 @@ case $1 in
         ./abi-compliance-checker.pl --help 2>&1 | sed -e '/^Report/ p' -e '/Examples:/,/^Report/ d' -e '/Name:/,/^$/ d' -e 's,./abi-compliance-checker.pl,abi-compliance-checker,' -e '/Usage:/ d'
         ;;
     --version)
-        dpkg-parsechangelog | sed -r -e '3,$ d' -e 's/^[a-zA-Z]*: //' -e '2 s/^/ /' | tr -d '\n' ; echo
+        dpkg-parsechangelog | sed -r -e '3,$ d' -e 's/^[a-zA-Z]*: //' -e '2 s/^/ /' -e '2 s/-[0-9.]*$//' | tr -d '\n' ; echo
         ;;
     --help2man)
         help2man -n "$(sed -e '/Description:/ !d' -e 's/Description: //' debian/control)" -N $0 | sed 's/.SH "REPORTING BUGS"/.SH "EXAMPLES"\nYou can see example usage and example descriptors in the \\-\\-help output.\n.SH "REPORTING BUGS"/'
