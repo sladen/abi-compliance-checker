@@ -4,5 +4,4 @@
 	dh $@
 
 override_dh_auto_install:
-	mkdir -p debian/$(shell dh_listpackages)/usr/bin/
-	cp abi-compliance-checker.pl debian/$(shell dh_listpackages)/usr/bin/abi-compliance-checker
+	install -m 755 -T abi-compliance-checker.pl debian/$(shell dh_listpackages)/usr/bin/abi-compliance-checker

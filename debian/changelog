@@ -2,6 +2,7 @@ abi-compliance-checker (1.1-2) unreleased; urgency=low
 
   * Include handwritten manpage
   + Remove help2man dependency
+  * Use install -T 0755 and dh_installdirs
 
  -- Paul Sladen <debian@paul.sladen.org>  Fri, 07 Aug 2009 17:07:00 +0100
 
