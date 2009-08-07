@@ -20,9 +20,10 @@ Description: Compare ABI compatibility of shared C/C++ library versions
  themselves, and by analysing the header files (.h) provided for the
  two versions of the library and their dependencies.
  .
- Shared developers trying to strive for binary compatibility between
- releases may also use this tool to detect if an any accidental
- application binary interface (ABI) changes have been introduced.
+ Shared library developers trying to strive for binary compatibility
+ between releases may also use this tool to detect if an any
+ accidental application binary interface (ABI) changes have been
+ introduced.
  .
  The checker may also be used for assessing binary compatibility
  between different Linux distributions.
