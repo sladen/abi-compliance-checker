@@ -7,6 +7,7 @@ abi-compliance-checker (1.1-2) unreleased; urgency=low
   * debian/copyright:
 	add copyright year
 	expand "RAS" to Russian Academy of Sciences
+	add email address for upstream maintainer
 
  -- Paul Sladen <debian@paul.sladen.org>  Fri, 07 Aug 2009 17:07:00 +0100
 

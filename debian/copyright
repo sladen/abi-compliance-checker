@@ -1,6 +1,6 @@
 Format-Specification:
     http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=196
-Upstream-Maintainer: Andrey Ponomarenko
+Upstream-Maintainer: Andrey Ponomarenko <andrei.moscow@mail.ru>
 Upstream-Source: http://ispras.linux-foundation.org/index.php/ABI_compliance_checker_Downloads
 Upstream-Name: ABI compliance checker
 
