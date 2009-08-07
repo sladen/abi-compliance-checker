@@ -4,6 +4,9 @@ abi-compliance-checker (1.1-2) unreleased; urgency=low
   + Remove help2man dependency
   * Use install -T 0755 and dh_installdirs
   * debian/watch: Case insentisve match (WikiMedia CamelCasing)
+  * debian/copyright:
+	add copyright year
+	expand "RAS" to Russian Academy of Sciences
 
  -- Paul Sladen <debian@paul.sladen.org>  Fri, 07 Aug 2009 17:07:00 +0100
 

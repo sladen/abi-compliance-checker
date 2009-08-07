@@ -5,8 +5,8 @@ Upstream-Source: http://ispras.linux-foundation.org/index.php/ABI_compliance_che
 Upstream-Name: ABI compliance checker
 
 Files: *
-Copyright: Copyright (C) The Linux Foundation
- Copyright (C) Institute for System Programming, RAS
+Copyright: Copyright 2009, The Linux Foundation
+ Copyright 2009, Institute for System Programming, Russian Academy of Sciences
 License: GPL-3+
 
 Files: debian/*
