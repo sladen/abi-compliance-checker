@@ -1,7 +1,7 @@
 Source: abi-compliance-checker
 Section: devel
 Priority: optional
-Build-Depends: debhelper (>= 7), help2man, perl
+Build-Depends: debhelper (>= 7)
 Maintainer: Ryan Niebur <ryanryan52@gmail.com>
 DM-Upload-Allowed: yes
 Standards-Version: 3.8.2

@@ -1,0 +1,173 @@
+.\" -*- nroff -*-
+.TH ABI-COMPLIANCE-CHECKER 1 "7 August 2009" abi-compliance-checker
+
+.SH "NAME"
+abi-compliance-checker \- Compare ABI/binary compatibility for C/C++ shared library
+.SH "SYNOPSIS"
+\fBabi-compliance-checker\fR \fB-d\fR
+.br
+\fBabi-compliance-checker\fR \fB-l\fR \fI<libname>\fI \fB-d1\fR \fI<v1.xml>\fR \fB-d2\fR \fI<v2.xml>\fR [\fB-fast\fR]
+
+.br
+.SH "DESCRIPTION"
+Compare backward binary compatibility of shared C/C++ libraries.
+
+This can be used to help reduce the possibility of an application
+crashing when the shared libraries it links against have changed.
+Signatures and data type definations from two separate versions of a
+library are compared by examining the shared objects (.so) files
+themselves, and by analysing the header files (.h) provided for the
+two versions of the library and their dependencies.
+
+Shared developers trying to strive for binary compatibility between releases may also use
+this tool to detect if an any accidental application binary interface (ABI)
+changes have been introduced.
+
+.br
+.SH "GETTING STARTED"
+Two XML descriptors must be generated and passed to the tool.  These
+configuration files inform \fIabi-compliance-checker\fR where to look
+for the actual data to compare.
+
+.br
+.SH "OPTIONS"
+.TP
+\fB-help\fR
+Help message and examples (similar to this man page).
+.TP
+\fB-d\fR
+Spit out example template files named \fBlib_descriptor.v1\fR and
+\fBlib_descriptor.v2\fR in the current directory.  The two template
+files are identical and will both require customising.  Any existing files of the same names will be \fIoverwritten without warning\fR.
+.TP
+\fB-l \fIlibraryname\fR
+Library name.
+.TP
+\fB-d1 \fIdescriptor.xml\fR
+Path to descriptor of 1st library version (described in \fBDATAFILES\fR below).
+.TP
+\fB-d2 \fIdescriptor.xml\fR
+Path to descriptor of 2nd library version.
+.TP
+\fB-fast\fR
+Compiling of all headers together for speed. (Note that this is very
+fast, but any compiler errors shown for one header may affect files
+others).
+
+.br
+.SH "DATAFILES"
+.TP
+Library descriptor XML format:
+
+<version>
+    /* Library version */
+.br
+</version>
+
+<headers>
+.br
+    /* The list of header paths or directories, one per line */
+.br
+</headers>
+
+<libs>
+.br
+    /* The list of shared object paths or directories, one per line */
+.br
+</libs>
+
+<include_paths>
+.br
+    /* The list of directories to be searched for header files needed for compiling of library headers, one per line */
+.br
+    /* This section is not necessary */
+.br
+</include_paths>
+
+<gcc_options>
+.br
+    /* Addition gcc options, one per line */
+.br
+    /* This section is not necessary */
+.br
+</gcc_options>
+
+<opaque_types>
+.br
+    /* The list of types that should be skipped while checking, one per line */
+.br
+    /* This section is not necessary */
+.br
+</opaque_types>
+
+<internal_functions>
+.br
+    /* The list of functions that should be skipped while checking, one mangled name per line */
+.br
+    /* This section is not necessary */
+.br
+</internal_functions>
+.br
+
+<include_preamble>
+.br
+    /* The list of headers that will be included before each analyzed header */
+.br
+    /* For example, it is a tree.h for libxml2 and ft2build.h for freetype2 */
+.br
+    /* This section is not necessary */
+.br
+    /* This section is useless when -fast option selected */
+.br
+</include_preamble>
+
+.br
+.SH "EXAMPLES"
+.TP
+Command lines:
+
+abi-compliance-checker -l glib -d1 descriptor_glib_2.20.3 -d2 descriptor_glib_2.20.4
+.br
+abi-compliance-checker -l gtk2 -d1 descriptor_gtk2_2.16.4 -d2 descriptor_gtk2_2.17.3
+
+.TP
+Library descriptor example:
+
+<version>2.26.0</version>
+<headers>/usr/local/librsvg/librsvg-2.26.0/include</headers>
+<libs>/usr/local/librsvg/librsvg-2.26.0/lib</libs>
+<include_paths>
+.br
+    /usr/include/glib-2.0
+.br
+    /usr/include/gtk-2.0
+.br
+    /usr/include/atk-1.0
+.br
+    /usr/include/cairo
+.br
+    /usr/include/pango-1.0
+.br
+    /usr/include/pixman-1
+.br
+    /usr/include/freetype2
+.br
+    /usr/include/libpng12
+.br
+</include_paths>
+
+.br
+.SH "BUGS"
+Upstream bug reports for \fIabi-compliance-checker\fR should be emailed to <abi.compliance.checker@gmail.com>.
+
+.SH "AUTHOR"
+.TP
+Andrey Ponomarenko <andrei.moscow@mail.ru> - Institute for System Programming, RAS and the The Linux Foundation. Distributed under the terms of the GNU General Public License version 3 or later.
+.TP
+This manual page was written for Debian/Ubuntu by Paul Sladen <debian@paul.sladen.org> and is hereby also distributed under the GPLv3 or later.
+
+.br
+.SH "SEE ALSO"
+Website:
+.BR http://ispras.linux-foundation.org/index.php/ABI_compliance_checker
+
