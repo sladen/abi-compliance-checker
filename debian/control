@@ -12,16 +12,17 @@ Vcs-Browser: http://git.ryan52.info/?p=abi-compliance-checker;a=summary
 Package: abi-compliance-checker
 Architecture: all
 Depends: ${perl:Depends}, ${misc:Depends}, gcc, binutils
-Description: tool for checking binary compatibility of shared libraries
- ABI-compliance-checker is a lightweight tool for checking backward
- binary compatibility of shared C/C++ libraries in OS Linux. It checks
- interface signatures and data type definitions in two library
- versions (headers and shared objects) and searches ABI changes that
- may lead to incompatibility. Breakage of the compatibility may result
- in crashing or incorrect behavior of applications built with an old
- version of a library when it is running with a new
- one. ABI-compliance-checker was intended for library developers that
- are interested in ensuring backward binary compatibility. Also
- ABI-compliance-checker may be used for checking forward binary
- compatibility and compliance checking of the same library versions on
- different Linux distributions.
+Description: Compare ABI compatibility of shared C/C++ library versions
+ This can be used to help reduce the possibility of an application
+ crashing when the shared libraries it links against have changed.
+ Signatures and data type definations from two separate versions of a
+ library are compared by examining the shared objects (.so) files
+ themselves, and by analysing the header files (.h) provided for the
+ two versions of the library and their dependencies.
+ .
+ Shared developers trying to strive for binary compatibility between
+ releases may also use this tool to detect if an any accidental
+ application binary interface (ABI) changes have been introduced.
+ .
+ The checker may also be used for assessing binary compatibility
+ between different Linux distributions.
