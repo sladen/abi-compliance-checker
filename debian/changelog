@@ -1,5 +1,6 @@
-abi-compliance-checker (1.1-2) unreleased; urgency=low
+abi-compliance-checker (1.1-1.1) unstable; urgency=low
 
+  * NMU
   * Include handwritten manpage
   + Remove help2man dependency
   * Use install -T 0755 and dh_installdirs
@@ -10,7 +11,7 @@ abi-compliance-checker (1.1-2) unreleased; urgency=low
   + add email address for upstream maintainer
   * debian/control: tweak Description:
 
- -- Paul Sladen <debian@paul.sladen.org>  Fri, 07 Aug 2009 17:07:00 +0100
+ -- Paul Sladen <debian@paul.sladen.org>  Fri, 07 Aug 2009 18:04:00 +0100
 
 abi-compliance-checker (1.1-1) unstable; urgency=low
 
